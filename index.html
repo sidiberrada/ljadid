@@ -4,10 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <meta name="theme-color" content="#0d3b66" />
+
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://images.unsplash.com; connect-src 'self' https://script.google.com https://script.googleusercontent.com; form-action 'self' https://script.google.com; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; upgrade-insecure-requests">
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta name="robots" content="index, follow" />
+
   <title>السبّاك المعتمد — خدمات سباكة احترافية | اتصل الآن</title>
   <meta name="description" content="سبّاك محترف لإصلاح التسريبات، تركيب الحنفيات وسخانات المياه، تسليك المجاري وتجهيز الحمامات. خدمة سريعة وأسعار مناسبة." />
-
- 
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -41,7 +44,7 @@
         <img
           src="images/hero-plombier.jpg"
           alt="السبّاك المعتمد"
-          onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?auto=format&fit=crop&w=900&q=80';"
+          data-fallback="https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?auto=format&fit=crop&w=900&q=80"
         />
         <div class="hero-badge">
           <div class="hero-badge-stars">★★★★★</div>
@@ -135,7 +138,7 @@
               src="images/service-fuites.jpg"
               alt="إصلاح التسريبات"
               loading="lazy"
-              onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1585704032915-c3400ca199e7?auto=format&fit=crop&w=600&q=70';"
+              data-fallback="https://images.unsplash.com/photo-1585704032915-c3400ca199e7?auto=format&fit=crop&w=600&q=70"
             />
           </div>
           <div class="service-body">
@@ -153,7 +156,7 @@
               src="images/service-robinets.jpg"
               alt="تركيب الحنفيات"
               loading="lazy"
-              onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=600&q=70';"
+              data-fallback="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=600&q=70"
             />
           </div>
           <div class="service-body">
@@ -171,7 +174,7 @@
               src="images/service-chauffe-eau.jpg"
               alt="تركيب سخانات المياه"
               loading="lazy"
-              onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=600&q=70';"
+              data-fallback="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=600&q=70"
             />
           </div>
           <div class="service-body">
@@ -189,7 +192,7 @@
               src="images/service-debouchage.jpg"
               alt="تسليك المجاري"
               loading="lazy"
-              onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1542013936693-884638332954?auto=format&fit=crop&w=600&q=70';"
+              data-fallback="https://images.unsplash.com/photo-1542013936693-884638332954?auto=format&fit=crop&w=600&q=70"
             />
           </div>
           <div class="service-body">
@@ -207,7 +210,7 @@
               src="images/service-salle-bain.jpg"
               alt="تجهيز الحمامات"
               loading="lazy"
-              onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?auto=format&fit=crop&w=600&q=70';"
+              data-fallback="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?auto=format&fit=crop&w=600&q=70"
             />
           </div>
           <div class="service-body">
@@ -225,7 +228,7 @@
               src="images/service-machine-laver.jpg"
               alt="تركيب الغسّالات"
               loading="lazy"
-              onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1610557892470-55d9e80c0bce?auto=format&fit=crop&w=600&q=70';"
+              data-fallback="https://images.unsplash.com/photo-1610557892470-55d9e80c0bce?auto=format&fit=crop&w=600&q=70"
             />
           </div>
           <div class="service-body">
@@ -265,7 +268,7 @@
             «خدمةٌ ممتازةٌ وسريعة. اتّصلتُ به مساءً لإصلاح تسريبٍ مفاجئ، فحضر في وقتٍ قصير جداً وأنجز العمل بإتقانٍ كبير. أنصح به بشدّة.»
           </p>
           <footer class="review-foot">
-            <div class="avatar" style="background:#e63946">ك</div>
+            <div class="avatar avatar-red">ك</div>
             <div class="review-meta">
               <strong>كريمة بنعلي</strong>
               <small>قبل ٣ أسابيع · Google</small>
@@ -279,7 +282,7 @@
             «سبّاكٌ محترفٌ وصادق. شرح لي كلَّ شيءٍ قبل البدء، وكان السعر واضحاً منذ البداية بدون أيّة مفاجآت. عملٌ نظيفٌ ومُتقَن، شكراً جزيلاً.»
           </p>
           <footer class="review-foot">
-            <div class="avatar" style="background:#1d3557">م</div>
+            <div class="avatar avatar-navy">م</div>
             <div class="review-meta">
               <strong>محمد العلوي</strong>
               <small>قبل شهر · Google</small>
@@ -293,7 +296,7 @@
             «كان لديّ انسدادٌ مزمنٌ في المطبخ، جرّبتُ أشخاصاً كُثر دون فائدة. هذا السبّاك حلَّ المشكلة في أقلَّ من ساعةٍ بأدواتٍ احترافية. يستحقُّ خمس نجوم.»
           </p>
           <footer class="review-foot">
-            <div class="avatar" style="background:#06a77d">س</div>
+            <div class="avatar avatar-teal">س</div>
             <div class="review-meta">
               <strong>سعاد الإدريسي</strong>
               <small>قبل شهرين · Google</small>
@@ -341,20 +344,25 @@
         <p>املأوا النموذج التالي وسأعود إليكم في أسرع وقتٍ ممكن.</p>
       </header>
 
-      <form class="contact-form" id="leadForm">
+      <form class="contact-form" id="leadForm" novalidate>
         <div class="form-field">
           <label for="name">الاسم</label>
-          <input type="text" id="name" name="name" required placeholder="اكتبوا اسمكم الكامل" />
+          <input type="text" id="name" name="name" required maxlength="80" autocomplete="name" placeholder="اكتبوا اسمكم الكامل" />
         </div>
 
         <div class="form-field">
           <label for="email">البريد الإلكتروني</label>
-          <input type="email" id="email" name="email" required placeholder="exemple@email.com" />
+          <input type="email" id="email" name="email" required maxlength="120" autocomplete="email" placeholder="exemple@email.com" />
         </div>
 
         <div class="form-field">
           <label for="phone">رقم الهاتف</label>
-          <input type="tel" id="phone" name="phone" required placeholder="06XXXXXXXX" />
+          <input type="tel" id="phone" name="phone" required maxlength="20" inputmode="tel" autocomplete="tel" pattern="[0-9+\s\-()]{8,20}" placeholder="06XXXXXXXX" />
+        </div>
+
+        <div class="hp-field" aria-hidden="true">
+          <label for="website">Website</label>
+          <input type="text" id="website" name="website" tabindex="-1" autocomplete="off" />
         </div>
 
         <button type="submit" class="btn btn-submit">
@@ -368,10 +376,8 @@
   </section>
 
   <!-- ═══════════════════ CREDIT ═══════════════════ -->
-  <section class="credit" style="text-align:center;padding:48px 16px;background:#0d3b66;color:#fff;" dir="ltr">
-    <p style="margin:0;font-family:'Cairo',sans-serif;font-weight:900;font-size:clamp(28px,6vw,56px);letter-spacing:1px;line-height:1.2;">
-      Made by Mohamed BERRADA
-    </p>
+  <section class="credit" dir="ltr">
+    <p class="credit-text">Made by Mohamed BERRADA</p>
   </section>
 
   <!-- ═══════════════════ FOOTER ═══════════════════ -->
@@ -395,43 +401,6 @@
     </a>
   </nav>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    (function () {
-      const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxo8Dych0P1DvJCGTDCJX5HiV2kDShpo3a2o1WXc3nnAjg3aVe84xPthfm00pJ4Gw67Cg/exec';
-      const form = document.getElementById('leadForm');
-      if (!form) return;
-
-      const submitBtn = form.querySelector('.btn-submit');
-      const submitLabel = submitBtn.querySelector('strong');
-      const successMsg = form.querySelector('.form-success');
-      const errorMsg = form.querySelector('.form-error');
-      const defaultLabel = submitLabel.textContent;
-
-      form.addEventListener('submit', async function (e) {
-        e.preventDefault();
-        successMsg.hidden = true;
-        errorMsg.hidden = true;
-        submitBtn.disabled = true;
-        submitLabel.textContent = 'جاري الإرسال...';
-
-        try {
-          await fetch(SCRIPT_URL, {
-            method: 'POST',
-            mode: 'no-cors',
-            body: new FormData(form)
-          });
-          successMsg.hidden = false;
-          form.reset();
-        } catch (err) {
-          errorMsg.hidden = false;
-        } finally {
-          submitBtn.disabled = false;
-          submitLabel.textContent = defaultLabel;
-        }
-      });
-    })();
-  </script>
+  <script src="app.js" defer></script>
 </body>
 </html>

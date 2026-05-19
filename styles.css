@@ -601,6 +601,9 @@ ul  { list-style: none; }
   font-size: 18px;
   flex-shrink: 0;
 }
+.avatar-red  { background: #e63946; }
+.avatar-navy { background: #1d3557; }
+.avatar-teal { background: #06a77d; }
 .review-meta strong {
   display: block;
   font-size: 15px;
@@ -878,10 +881,36 @@ ul  { list-style: none; }
 }
 
 /* ═══════════════════════════════════════════════════════════
+   CREDIT
+   ═══════════════════════════════════════════════════════════ */
+.credit {
+  text-align: center;
+  padding: 48px 16px;
+  background: var(--primary);
+  color: #fff;
+}
+.credit-text {
+  margin: 0;
+  font-family: 'Cairo', sans-serif;
+  font-weight: 900;
+  font-size: clamp(28px, 6vw, 56px);
+  letter-spacing: 1px;
+  line-height: 1.2;
+}
+
+/* ═══════════════════════════════════════════════════════════
    CONTACT FORM
    ═══════════════════════════════════════════════════════════ */
 .contact-form-section {
   background: var(--bg-soft);
+}
+
+.hp-field {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }
 
 .contact-form {
