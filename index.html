@@ -332,6 +332,40 @@
     </div>
   </section>
 
+  <!-- ═══════════════════ CONTACT FORM ═══════════════════ -->
+  <section class="section contact-form-section" id="contact">
+    <div class="container">
+      <header class="section-head">
+        <span class="eyebrow">تواصلوا معي</span>
+        <h2>اتركوا بياناتكم وسأتصل بكم</h2>
+        <p>املأوا النموذج التالي وسأعود إليكم في أسرع وقتٍ ممكن.</p>
+      </header>
+
+      <form class="contact-form" onsubmit="event.preventDefault(); this.querySelector('.form-success').hidden = false;">
+        <div class="form-field">
+          <label for="name">الاسم</label>
+          <input type="text" id="name" name="name" required placeholder="اكتبوا اسمكم الكامل" />
+        </div>
+
+        <div class="form-field">
+          <label for="email">البريد الإلكتروني</label>
+          <input type="email" id="email" name="email" required placeholder="exemple@email.com" />
+        </div>
+
+        <div class="form-field">
+          <label for="phone">رقم الهاتف</label>
+          <input type="tel" id="phone" name="phone" required placeholder="06XXXXXXXX" />
+        </div>
+
+        <button type="submit" class="btn btn-submit">
+          <strong>إرسال الطلب</strong>
+        </button>
+
+        <p class="form-success" hidden>✓ شكراً لكم، تم استلام طلبكم بنجاح. سأتواصل معكم قريباً.</p>
+      </form>
+    </div>
+  </section>
+
   <!-- ═══════════════════ CREDIT ═══════════════════ -->
   <section class="credit" style="text-align:center;padding:48px 16px;background:#0d3b66;color:#fff;" dir="ltr">
     <p style="margin:0;font-family:'Cairo',sans-serif;font-weight:900;font-size:clamp(28px,6vw,56px);letter-spacing:1px;line-height:1.2;">
