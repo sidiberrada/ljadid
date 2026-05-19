@@ -341,7 +341,7 @@
         <p>املأوا النموذج التالي وسأعود إليكم في أسرع وقتٍ ممكن.</p>
       </header>
 
-      <form class="contact-form" onsubmit="event.preventDefault(); this.querySelector('.form-success').hidden = false;">
+      <form class="contact-form" id="leadForm">
         <div class="form-field">
           <label for="name">الاسم</label>
           <input type="text" id="name" name="name" required placeholder="اكتبوا اسمكم الكامل" />
@@ -362,6 +362,7 @@
         </button>
 
         <p class="form-success" hidden>✓ شكراً لكم، تم استلام طلبكم بنجاح. سأتواصل معكم قريباً.</p>
+        <p class="form-error" hidden>حدث خطأٌ أثناء الإرسال، يُرجى المحاولة مرّةً أخرى.</p>
       </form>
     </div>
   </section>
@@ -396,6 +397,41 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    (function () {
+      const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxo8Dych0P1DvJCGTDCJX5HiV2kDShpo3a2o1WXc3nnAjg3aVe84xPthfm00pJ4Gw67Cg/exec';
+      const form = document.getElementById('leadForm');
+      if (!form) return;
+
+      const submitBtn = form.querySelector('.btn-submit');
+      const submitLabel = submitBtn.querySelector('strong');
+      const successMsg = form.querySelector('.form-success');
+      const errorMsg = form.querySelector('.form-error');
+      const defaultLabel = submitLabel.textContent;
+
+      form.addEventListener('submit', async function (e) {
+        e.preventDefault();
+        successMsg.hidden = true;
+        errorMsg.hidden = true;
+        submitBtn.disabled = true;
+        submitLabel.textContent = 'جاري الإرسال...';
+
+        try {
+          await fetch(SCRIPT_URL, {
+            method: 'POST',
+            mode: 'no-cors',
+            body: new FormData(form)
+          });
+          successMsg.hidden = false;
+          form.reset();
+        } catch (err) {
+          errorMsg.hidden = false;
+        } finally {
+          submitBtn.disabled = false;
+          submitLabel.textContent = defaultLabel;
+        }
+      });
+    })();
   </script>
 </body>
 </html>
